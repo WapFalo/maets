@@ -1,0 +1,32 @@
+[
+  {
+    "id": "7cced7db-c4bf-4b9a-9e9c-99fa3952c603",
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "releaseDate": "3 mars 2017"
+  },
+  {
+    "id": "46f035a3-0f33-4def-9557-8b458ec5e60a",
+    "name": "Super Mario Odyssey",
+    "releaseDate": "27 octobre 2017"
+  },
+  {
+    "id": "0cc49a9d-b675-4b09-a6c6-72a54c126607",
+    "name": "God of War",
+    "releaseDate": "20 avril 2018"
+  },
+  {
+    "id": "7660878a-dad5-446c-9c71-5dd7c6e2a1f6",
+    "name": "Red Dead Redemption 2",
+    "releaseDate": "26 octobre 2018"
+  },
+  {
+    "id": "a8688061-e8c1-4691-89a6-a1d385ec88e6",
+    "name": "The Witcher 3: Wild Hunt",
+    "releaseDate": "19 mai 2015"
+  },
+  {
+    "id": "d1c4bd29-dc1e-496b-bde5-0084ed82504c",
+    "name": "Horizon Zero Dawn",
+    "releaseDate": "28 février 2017"
+  }
+]

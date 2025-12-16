@@ -1,0 +1,20 @@
+meta {
+  name: Delete Game
+  type: http
+  seq: 3
+}
+
+delete {
+  url: http://localhost:3000/api/v1/games/delete/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

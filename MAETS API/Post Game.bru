@@ -1,0 +1,51 @@
+meta {
+  name: Post Game
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/api/v1/games/post
+  body: json
+  auth: oauth2
+}
+
+headers {
+  Authorization: Bearer {{access_token}}
+}
+
+auth:oauth2 {
+  grant_type: authorization_code
+  callback_url: 
+  authorization_url: 
+  access_token_url: 
+  refresh_token_url: 
+  client_id: 
+  client_secret: 
+  scope: 
+  state: 
+  pkce: false
+  credentials_placement: body
+  credentials_id: credentials
+  token_placement: header
+  token_header_prefix: Bearer
+  auto_fetch_token: true
+  auto_refresh_token: false
+}
+
+body:json {
+  {
+          "id": 6,
+          "name": "Horizon Zero Dawn",
+          "releaseDate": "2017-02-28"
+  }
+}
+
+body:form-urlencoded {
+  id: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

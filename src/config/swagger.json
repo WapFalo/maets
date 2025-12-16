@@ -1,0 +1,9 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Maets API",
+    "version": "1.0.0",
+    "description": "Documentation API Maets"
+  },
+  "paths": {}
+}
