@@ -1,6 +1,6 @@
 import { GameService } from "./index.service.js";
 import { GameRepository } from "../repositories/index.repository.js";
-import { gamesMock } from "../../mocks/games.mock.js"
+import { gamesMock } from "../../mocks/games.mock.js";
 import { gameExists } from "../repositories/game.repository.js";
 
 console.log("GameRepository import:", GameRepository);

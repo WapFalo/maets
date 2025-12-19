@@ -1,0 +1,37 @@
+services:
+  db:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: maets_admin
+      MONGO_INITDB_ROOT_PASSWORD: maets_password_secure!
+    volumes:
+      - dbdata:/var/lib/mongo
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://maets_admin:maets_password_secure!@mongo:27017/
+      ME_CONFIG_BASICAUTH_ENABLED: true
+      ME_CONFIG_BASICAUTH_USERNAME: mongoexpressuser
+      ME_CONFIG_BASICAUTH_PASSWORD: mongoexpresspass
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    ports:
+      - 8082:8080
+    environment:
+      - URL=http://app:3000/v3/api-docs
+    depends_on:
+      - app
+  app:
+    image: maets
+    ports:
+      - 3000:3000
+    volumes:
+     - "./:/app/src"
+    
+volumes:
+  dbdata:
