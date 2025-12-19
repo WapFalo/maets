@@ -25,7 +25,7 @@ const swaggerDocument = JSON.parse(
 
 const app = express();
 const authRoutes = import('./routes/auth.js');
-const port = 3000;
+const port = process.env.APP_PORT || 3000;
 
 // Récupération clé
 const secretKey = process.env.JWT_SECRET;

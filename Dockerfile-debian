@@ -1,0 +1,17 @@
+# On part de l'image officielle node
+FROM debian
+
+ENV LANG en_US.utf8
+
+RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \ && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+
+# On définit /app comme le "WORKDIR"
+# A partir de cette ligne, toutes les commandes sont relatives au dossier /app
+WORKDIR /app
+
+# On copie le reste du code dans l'image
+COPY ./src ./src
+
+# On définit la commande à lancer lorsque le conteneur démarre
+# Notez la syntaxe reloue (mais très secure) : sous forme de liste, pas d'espace
+CMD [ "bash" ]
