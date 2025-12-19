@@ -1,5 +1,5 @@
 # On part de l'image officielle node
-FROM node
+FROM node:alpine
 
 # On exécute des commandes mkdir pour préparer les dossiers qui vont accueillir notre code
 RUN mkdir /app && mkdir /app/src
@@ -19,6 +19,8 @@ RUN npm install
 # On copie le reste du code dans l'image
 COPY ./src ./src
 
+ENV NODE_ENV=production
+
 # On définit la commande à lancer lorsque le conteneur démarre
 # Notez la syntaxe reloue (mais très secure) : sous forme de liste, pas d'espace
-CMD [ "npm", "run", "start" ]
+CMD [ "node", "src/flood.js" ]
